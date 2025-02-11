@@ -8,9 +8,15 @@ namespace Layout
             Console.Write(mensagem);
             Console.ResetColor();
         }
-        public static void ImprimirCabecalho()
+        public static void ImprimirCabecalho(string titulo)
         {
-          
+          int largura = 40;
+          string borda = new string('=', largura);
+
+          Formatacao.Cor("╔" + borda + "╗", ConsoleColor.White);
+          Formatacao.Cor("║" + titulo.PadLeft((largura + titulo.Length) / 2).PadRight(largura) + "║");
+          Formatacao.Cor("╚" + borda + "╝");
+
         }
     }
 }
