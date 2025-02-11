@@ -14,8 +14,8 @@ namespace Layout
           string borda = new string('=', largura);
 
           Formatacao.Cor("╔" + borda + "╗", ConsoleColor.White);
-          Formatacao.Cor("║" + titulo.PadLeft((largura + titulo.Length) / 2).PadRight(largura) + "║");
-          Formatacao.Cor("╚" + borda + "╝");
+          Formatacao.Cor("║" + titulo.PadLeft((largura + titulo.Length) / 2).PadRight(largura) + "║", ConsoleColor.White);
+          Formatacao.Cor("╚" + borda + "╝", ConsoleColor.White);
 
         }
     }
