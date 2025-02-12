@@ -2,20 +2,23 @@ namespace Layout
 {
     class Formatacao
     {
-        public static void Cor(string mensagem, ConsoleColor cor) 
+        public static void Cor(string mensagem, ConsoleColor cor)
         {
             Console.ForegroundColor = cor;
             Console.Write(mensagem);
             Console.ResetColor();
         }
-        public static void ImprimirCabecalho(string titulo)
+        public static void ImprimirCabecalho()
         {
-          int largura = 40;
-          string borda = new string('=', largura);
+            string titulo = "Gerenciador de Tarefas";
+            int largura = 40;
+            string borda = new string('=', largura);
+            string espacos = new string(' ', (largura - titulo.Length) / 2);
 
-          Formatacao.Cor("╔" + borda + "╗", ConsoleColor.White);
-          Formatacao.Cor("║" + titulo.PadLeft((largura + titulo.Length) / 2).PadRight(largura) + "║", ConsoleColor.White);
-          Formatacao.Cor("╚" + borda + "╝", ConsoleColor.White);
+            Console.WriteLine("╔" + borda + "╗");
+            Console.WriteLine("║" + espacos + titulo + espacos + (largura % 2 == 0 ? "" : " ") + "║");
+            Console.WriteLine("╚" + borda + "╝");
+
 
         }
     }
