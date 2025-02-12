@@ -31,7 +31,7 @@ namespace GerenciadorTarefa
 
         public void ListarTarefa()
         {
-            Formatacao.Cor("Tarefas:", ConsoleColor.Yellow);
+            Formatacao.Cor("Tarefas:", ConsoleColor.White);
             foreach (var tarefa in listaDeTarefas)
             {
                 tarefa.ExibirTarefa();

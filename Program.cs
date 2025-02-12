@@ -6,9 +6,8 @@ using GerenciadorTarefa;
 class Program
 {
     static void Main()
-    {
+    {   
         var gerenciador = new GerenciarTarefa();
-
 
 
         while (true)
